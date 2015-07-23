@@ -1,13 +1,20 @@
 <html>
 	<head>
 		<title>{{title}} - Framed</title>
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'surveys/materialize/css/materialize.css' %}">
+		<link rel="stylesheet" href="{% static 'surveys/css/custom.css' %}">
 		<body>
 			<div class="container">
 				<div class="row">
-					<div class="card">
-						<img src="{{img_url}}" alt="">
-						<h2>{{title}}</h2>
-						<p>{{description}}</p>
+					<div class="card large">
+						<div class="card-image">
+							<img src="{{img_url}}" alt="">
+						</div>
+						<div class="card-content">
+							<h2>{{title}}</h2>
+							<p>{{description}}</p>
+						</div>
 					</div>
 				</div>
 			</div>
