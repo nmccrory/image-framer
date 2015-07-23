@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Survey Form</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<h1>Image Framer</h1>
+				<form action="/surveys/process/" method='post'>
+					{% csrf_token %}
+					<label for="title">Image Title</label>
+					<input type="text" name='title'>
+					<label for="description">Description</label>
+					<input type="text" name='description'>
+					<label for="img_url">Image URL</label>
+					<input type="text" name='img_url'>
+					<button type='submit' value='submit' class='btn btn-med blue'>Frame</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
